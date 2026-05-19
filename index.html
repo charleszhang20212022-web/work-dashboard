@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>업무 종합 대시보드 · 종합 개요</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="overview">
+  <div class="app">
+    <!-- 사이드바: components.js 가 동적으로 구성 -->
+    <aside class="sidebar" id="sidebar"></aside>
+
+    <main class="main">
+      <!-- 상단바: components.js 가 동적으로 구성 -->
+      <header class="topbar" id="topbar"></header>
+
+      <div class="content">
+
+        <!-- 핵심 지표 -->
+        <div class="grid kpi" id="kpiGrid"></div>
+
+        <!-- 매출 추이 · 업무 진행 상태 -->
+        <div class="section-title">매출 · 업무 현황</div>
+        <div class="grid main-split">
+          <div class="card">
+            <div class="card-head">
+              <div>
+                <h3>매출 추이</h3>
+                <div class="desc" id="revDesc"></div>
+              </div>
+              <div class="toggle-group" id="revToggle">
+                <button class="toggle-btn active" data-range="yearly">12개월</button>
+                <button class="toggle-btn" data-range="weekly">7일</button>
+              </div>
+            </div>
+            <div id="revChart"></div>
+          </div>
+          <div class="card">
+            <div class="card-head">
+              <div><h3>업무 진행 상태</h3><div class="desc">전체 업무 분포</div></div>
+            </div>
+            <div id="statusChart"></div>
+          </div>
+        </div>
+
+        <!-- 부서 실적 · 최근 활동 -->
+        <div class="section-title">부서 실적 · 활동</div>
+        <div class="grid split">
+          <div class="card">
+            <div class="card-head">
+              <div><h3>부서별 목표 달성률</h3><div class="desc">이번 달 기준 · 목표 100%</div></div>
+            </div>
+            <div id="deptBars"></div>
+          </div>
+          <div class="card">
+            <div class="card-head">
+              <div><h3>최근 활동</h3><div class="desc">팀 활동 피드</div></div>
+            </div>
+            <div id="activityFeed"></div>
+          </div>
+        </div>
+
+        <div class="foot">© 2026 오로라 테크놀로지 · 업무 종합 대시보드</div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
