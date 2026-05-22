@@ -1,0 +1,25 @@
+{
+  "name": "work-dashboard",
+  "version": "2.0.0",
+  "description": "업무 종합 대시보드 고도화 — 16:9 단일화면, Google 로그인, 관리자 권한, 업무 분장, 업무용 SNS 채팅, 포스트잇, 일·주·월·분기·연 결산 분석, 일일 결산 자동 메일 발송",
+  "main": "server/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node server/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^6.9.13",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "pg": "^8.11.5",
+    "socket.io": "^4.7.5"
+  }
+}
