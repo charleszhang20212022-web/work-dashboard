@@ -14,3 +14,6 @@ data/
 # 로그
 *.log
 npm-debug.log*
+
+# 제출 산출물(개인 URL 포함)
+대시보드 고도화_*.txt
